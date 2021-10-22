@@ -7,6 +7,22 @@
 #include "GameObject.h"
 #include "Vector3D.h"
 
+void PrintGameObjects(const std::map<std::string, GameObject*>& game_objects)
+{
+	std::cout << "=================================" << std::endl;
+	std::cout << " Output map of Game Objects      " << std::endl;
+	std::cout << "=================================" << std::endl;
+
+	// for every game_object in gameObjects...loop
+	for (const auto& game_object : game_objects)
+	{
+		std::cout << "Key  : " << game_object.first << std::endl;
+		std::cout << "---------------------------------" << std::endl;
+		std::cout << game_object.second->ToString();
+		std::cout << "---------------------------------\n" << std::endl;
+	}
+}
+
 
 int main()
 {
